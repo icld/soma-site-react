@@ -1,0 +1,133 @@
+.container {
+  display: grid;
+  grid-template-columns: minmax(150px, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-rows: 350px 1fr 1fr;
+  grid-template-areas: "nav" "content" "player";
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: minmax(150px, auto);
+  grid-template-rows: repeat (8, 1fr);
+  grid-template-areas: "john" "about" "discography" "services" "gear" "social" "contact";
+  grid-area: nav;
+}
+
+.soma-logo-box {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-area: content;
+  grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont";
+}
+
+.social {
+  grid-area: social;
+}
+
+.about {
+  grid-area: about;
+}
+
+.gear {
+  grid-area: gear;
+}
+
+.discography {
+  grid-area: discography;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+h1.nav-logo {
+  grid-area: nav-logo;
+}
+
+.player-container {
+  grid-area: player;
+}
+
+.main-photo {
+  grid-area: main-photo;
+}
+
+.services {
+  grid-area: services;
+}
+
+.about-container {
+  grid-area: abt-cont;
+}
+
+.gear-container {
+  grid-area: gear-cont;
+}
+
+.discog-container {
+  grid-area: discog-cont;
+}
+
+.nav-logo-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-area: john;
+  grid-template-areas: "nav-logo";
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat (3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 325px 1fr 1fr;
+    grid-template-areas: "nav nav player" "content content player";
+  }
+  .nav {
+    /* height: 500px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "john john" "about about" "discography discography" "services services" "gear gear" "social social" "contact contact";
+  }
+  .soma-logo-box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 8;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: repeat (4, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 225px 1fr;
+    grid-template-areas: "nav nav nav player" "content content content player";
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr 1.25fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "john john logo" "about about services" "gear gear contact " "discography discography social ";
+    grid-column-gap: 20px;
+    grid-area: nav;
+  }
+  .soma-logo-box {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}

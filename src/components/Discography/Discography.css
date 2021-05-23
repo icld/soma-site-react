@@ -1,0 +1,82 @@
+img {
+  align-self: center;
+  width: 125px;
+  height: 125px;
+}
+
+span {
+  padding-left: 13px;
+}
+
+.record-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: grid;
+  /* max-height: 225px; */
+  grid-template-columns: 1fr 2fr;
+  padding: 10px;
+  margin: 5px;
+  /* min-width: 662px; */
+}
+
+.record-info {
+  padding-left: 20px;
+}
+
+.artist-title {
+  display: flex;
+  font-size: 1.5rem;
+  padding-left: 13px;
+  text-shadow: 0.5px 0.5px 1px black;
+  /* flex-wrap: nowrap; */
+}
+h3 {
+  font-size: 1.25rem;
+}
+.record-info p {
+  font-size: 20px;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.record-info h2 {
+  align-self: center;
+}
+
+.record-card h2 {
+  text-shadow: 0.5px 0.5px 1px black;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  img {
+    align-self: center;
+    width: 200px;
+    height: 200px;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .record-info {
+    padding-left: none;
+  }
+  .discog p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .discog h2 {
+    font-size: 1.9rem;
+  }
+  .discog h3 {
+    font-size: 1.5rem;
+  }
+  .discog p {
+    font-size: 24px;
+    margin: none;
+  }
+}

@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Novecento sans", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.nav {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: 999;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 60px;
+}
+
+a.nav-li {
+  flex: auto;
+  display: inline-block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 20px;
+  border-bottom: 1px solid black;
+  z-index: 2;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #1b1f28;
+}
+
+.soma-logo-box {
+  color: #1b1f28;
+  margin: auto 0;
+}
+
+.soma-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  opacity: 0.15;
+  padding: 5px;
+  z-index: 1;
+}
+
+.social {
+}
+
+.about {
+  border-top: 1px solid black;
+}
+
+.contact {
+  border-top: none;
+}
+
+.nav-logo-home {
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+h1.nav-logo {
+  margin: 20px 0px 10px;
+  display: block;
+}
+
+.span-jump {
+  text-shadow: none;
+  transition: text-shadow 0.5s ease;
+}
+
+.span-fx {
+  text-shadow: rgb(11, 11, 11) 1px 0 10px;
+}
+
+.player-container {
+  margin: 0 auto;
+}
+
+.player-div {
+  position: sticky;
+  top: 0;
+}
+
+iframe {
+  font-size: 4px;
+  background: transparent;
+  border: none;
+  outline: none;
+  min-height: 350px;
+  height: 750px;
+  width: 400px;
+  font-size: 2px;
+}
+
+.main-photo {
+  object-fit: cover;
+  width: 100%;
+}
+
+p {
+  font-size: 24px;
+  text-align: justify;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  iframe {
+    width: 300px;
+  }
+  .soma-img {
+    display: flex;
+    align-content: center;
+  }
+  .soma-logo-box {
+    color: #1b1f28;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .nav {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 999;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  a.nav-li {
+    padding-top: 12px;
+    text-shadow: 0.5px 0.5px 1px black;
+  }
+  .soma-logo-box {
+    color: #1b1f28;
+    margin: auto 0;
+  }
+  .soma-img {
+    display: flex;
+    object-fit: contain;
+    margin: 0 auto;
+    align-content: center;
+    width: 300px;
+    max-height: 300px;
+    opacity: 0.17;
+  }
+}
