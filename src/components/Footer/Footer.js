@@ -1,8 +1,8 @@
 // import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "./Footer.css";
 
-const Header = () => {
+const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -10,12 +10,12 @@ const Header = () => {
     });
   };
   return (
-    <div className="header">
-      <nav className="floating-nav">
+    <div className="footer">
+      <nav className="floating-footer">
         <button onClick={scrollToTop}>Top</button>
       </nav>
     </div>
   );
 };
 
-export default Header;
+export default Footer;

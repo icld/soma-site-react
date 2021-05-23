@@ -4,13 +4,20 @@
 
 body {
   font-family: "Novecento sans", sans-serif;
+  background-color: black;
+  z-index: -1;
 }
 
 .container {
-  height: 100vh;
+  /* height: 100vh; */
   padding-right: 10px;
   padding-left: 10px;
-  background-color: transparent;
+  /* background-color: #1b1f28; */
+}
+
+.main-container {
+  background-color: white;
+  margin: 0 14px 10px 12px;
 }
 
 .nav {
@@ -94,7 +101,7 @@ h1.nav-logo {
 
 .player-div {
   position: sticky;
-  top: 0;
+  top: 40px;
 }
 
 iframe {

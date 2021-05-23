@@ -5,8 +5,18 @@
   grid-row-gap: 10px;
   grid-template-rows: 350px 1fr 1fr;
   grid-template-areas: "nav" "content" "player";
+  grid-area: "container";
 }
 
+.header {
+  grid-area: "header";
+  position: sticky;
+  top: 0;
+}
+
+.footer {
+  grid-area: "footer";
+}
 .nav {
   display: grid;
   grid-template-columns: minmax(150px, auto);
@@ -109,6 +119,13 @@ h1.nav-logo {
 }
 
 @media (min-width: 992px) {
+  .main-container {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: "header" "container" "footer";
+    /* height: 100%; */
+  }
   .container {
     grid-template-columns: repeat (4, auto);
     grid-column-gap: 20px;
