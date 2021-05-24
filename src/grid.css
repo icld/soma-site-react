@@ -76,10 +76,6 @@ h1.nav-logo {
   grid-area: services;
 }
 
-.about-container {
-  grid-area: abt-cont;
-}
-
 .gear-container {
   grid-area: gear-cont;
 }
@@ -137,7 +133,7 @@ h1.nav-logo {
     display: grid;
     grid-template-columns: 1fr 0.75fr 1.25fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "john john logo" "about about services" "gear gear contact " "discography discography social ";
+    grid-template-areas: "john john logo" "about about gear" "discography discography contact" "services services social ";
     grid-column-gap: 20px;
     grid-area: nav;
   }

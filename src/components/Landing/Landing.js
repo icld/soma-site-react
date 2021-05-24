@@ -1,8 +1,8 @@
-import Photo from "../Photo/Photo";
+import image from "./jMcentire1.png";
 import "./Landing.css";
 
 const Landing = () => {
-  return <Photo />;
+  return <img src={image} alt="John McEntire" className="main-photo" />;
 };
 
 export default Landing;
