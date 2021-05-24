@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Nav from "./components/Nav";
+import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import Gear from "./components/Gear";
 import Services from "./components/Services";
 import Discography from "./components/Discography/Discography";
-import About from "./components/About";
+import About from "./components//About/About";
 import Landing from "./components/Landing/Landing";
 import Player from "./components/Player";
 import Footer from "./components/Footer/Footer";

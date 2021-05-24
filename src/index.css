@@ -1,13 +1,29 @@
+@font-face {
+  font-family: "Steps-Mono";
+  src: local("Steps-Mono"), url(./fonts/Steps-Mono.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Steps-Mono-Thin";
+  font-weight: lighter;
+  src: local("Steps-Mono"), url(./fonts/Steps-Mono.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Urbanist-Light";
+  src: local("Urbanist-Light") url(./fonts/Urbanist-Light.otf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

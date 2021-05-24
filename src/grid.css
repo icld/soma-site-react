@@ -33,11 +33,11 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
   grid-area: content;
-  grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont";
+  /* grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
 }
 
 .social {
@@ -68,9 +68,9 @@ h1.nav-logo {
   grid-area: player;
 }
 
-.main-photo {
+/* .main-photo {
   grid-area: main-photo;
-}
+} */
 
 .services {
   grid-area: services;
@@ -128,7 +128,7 @@ h1.nav-logo {
   }
   .container {
     grid-template-columns: repeat (4, auto);
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
     grid-row-gap: 20px;
     grid-template-rows: 225px 1fr;
     grid-template-areas: "nav nav nav player" "content content content player";

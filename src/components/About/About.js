@@ -1,7 +1,9 @@
+import "./About.css";
+
 const About = () => {
   return (
-    <div>
-      <h2> About John MCEntire </h2>
+    <div className="about-container">
+      <h2> About John McEntire </h2>
 
       <div class="about-content">
         <p>

@@ -1,0 +1,17 @@
+.about-container {
+  border: 2px dashed rgb(1, 79, 79);
+  border-radius: 40px;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.about-container p {
+  font-family: Urbanist Light;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  text-indent: 20px;
+  text-align: justify;
+}
+
+.about-container h2 {
+}
