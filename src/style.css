@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Novecento sans", sans-serif;
+  font-family: "Steps-Mono", sans-serif;
   background-color: black;
   z-index: -1;
 }
@@ -31,6 +31,8 @@ body {
 }
 
 a.nav-li {
+  font-family: Novecento sans;
+  font-style: normal;
   flex: auto;
   display: inline-block;
   padding-top: 6px;
@@ -40,7 +42,7 @@ a.nav-li {
   line-height: 20px;
   border-bottom: 1px solid black;
   z-index: 2;
-  text-shadow: 0.5px 0.5px 1px black;
+  /* text-shadow: 0.5px 0.5px 1px black; */
 }
 
 a {
@@ -111,7 +113,7 @@ iframe {
   outline: none;
   min-height: 350px;
   height: 750px;
-  width: 400px;
+  /* width: 400px; */
   font-size: 2px;
 }
 
@@ -122,7 +124,7 @@ iframe {
 
 p {
   font-size: 24px;
-  text-align: justify;
+
   flex-wrap: wrap;
 }
 
@@ -142,7 +144,7 @@ p {
 
 @media (min-width: 992px) {
   .container {
-    padding-right: 30px;
+    padding-right: 10px;
     padding-left: 30px;
   }
   .nav {
@@ -155,7 +157,7 @@ p {
   }
   a.nav-li {
     padding-top: 12px;
-    text-shadow: 0.5px 0.5px 1px black;
+    /* text-shadow: 0.5px 0.5px 1px black; */
   }
   .soma-logo-box {
     color: #1b1f28;
