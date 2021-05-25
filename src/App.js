@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="main-container">
-        {/* <Header /> */}
+        <Header />
         <div className="container">
           <Nav />
           <Player />

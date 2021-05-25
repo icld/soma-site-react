@@ -1,15 +1,47 @@
 .header {
   margin: 0 auto;
   width: 100%;
-  /* transform: translateY(-40px); */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transform: translateY(-40px);
 }
+
+.show {
+  transform: translateY(0);
+}
+
 .floating-nav {
+  position: relative;
   /* display: flex; */
   position: sticky;
   top: 0;
+  text-align: center;
+
   align-items: center;
   justify-content: center;
-  background-color: #333;
-  height: 40px;
+  background-color: rgb(0, 0, 0);
+  height: 50px;
+  z-index: 999;
   color: white;
+}
+
+.nav-about {
+  font-family: Novecento sans;
+  color: azure;
+}
+
+.active-nav-item {
+  color: tomato;
+}
+
+.top-nav-btn {
+  color: azure;
+  border: none;
+  background: none;
+  font-size: large;
+}
+
+.top-nav-btn:hover {
+  color: tomato;
 }
