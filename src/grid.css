@@ -30,13 +30,13 @@
   grid-row-end: 8;
 }
 
-/* .content { */
-/* display: flex;
+.content {
+  display: flex;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-area: content;
-  grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
-/* } */
+  /* grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
+}
 
 .social {
   grid-area: social;
