@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
-  grid-template-rows: auto auto;
+  grid-template-rows: minmax(65px, 150px) auto;
   grid-template-areas: "about-pic" "about-info";
 }
 
@@ -24,14 +24,18 @@
   text-align: justify;
 }
 
-.about-pic {
-  object-fit: cover;
+.about-img-box {
+  grid-area: about-pic;
+}
+
+.about-img {
+  object-fit: fill;
   opacity: 0.8;
   /* height: 100%; */
   width: 100%;
-  grid-area: about-pic;
+
   /* border-radius:px; */
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* margin-left: 10px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

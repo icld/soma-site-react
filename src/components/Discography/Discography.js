@@ -16,7 +16,7 @@ const Discography = () => {
               <div className="record-info">
                 <h2>{album.album}</h2>
                 <p>
-                  credits: {album.credits} <br />
+                  Credits: {album.credits} <br />
                   {album.label} <br />
                   {album.year}
                 </p>

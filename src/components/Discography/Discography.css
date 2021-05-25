@@ -1,3 +1,11 @@
+.discog {
+  font-family: Urbanist-Light;
+}
+
+.discog h2 {
+  font-family: Steps-Mono-Thin;
+}
+
 .record-card img {
   align-self: center;
   width: 125px;

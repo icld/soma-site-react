@@ -5,7 +5,9 @@ import image from "./mcentire-sticks.png";
 const About = () => {
   return (
     <div className="about-wrapper">
-      <img src={image} alt="john" className="about-pic"></img>
+      <div classname="about-img-box">
+        <img src={image} alt="john" className="about-img"></img>
+      </div>
       {/* <img src={image2} alt="john" className="about-pic2"></img> */}
 
       <div className="about-container">

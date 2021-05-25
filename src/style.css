@@ -31,14 +31,16 @@ body {
 }
 
 a.nav-li {
-  font-family: Novecento sans;
-  font-style: normal;
+  text-transform: uppercase;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: Light;
+  font-weight: 300;
   flex: auto;
   display: inline-block;
   padding-top: 6px;
   padding-bottom: 6px;
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 24;
+  /* font-weight: 500; */
   line-height: 20px;
   border-bottom: 1px solid black;
   z-index: 2;
