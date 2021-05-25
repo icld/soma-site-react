@@ -2,7 +2,7 @@ a.nav-li:hover:after {
   content: " ←";
 }
 
-.nav-li-about-active::after {
+.nav-li.active::after {
   content: " ←";
 }
 

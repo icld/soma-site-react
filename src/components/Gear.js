@@ -1,5 +1,5 @@
 const Gear = () => {
-  return <h2>Gear</h2>;
+  return <h1>insectos</h1>;
 };
 
 export default Gear;

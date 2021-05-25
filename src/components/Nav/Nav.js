@@ -22,7 +22,7 @@ class Nav extends Component {
         <NavLink
           to="/about"
           className="nav-li about"
-          activeClassName="nav-li-about-active"
+          // activeClassName="active"
         >
           about
         </NavLink>
