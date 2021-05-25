@@ -30,13 +30,13 @@
   grid-row-end: 8;
 }
 
-.content {
-  /* display: grid; */
-  /* grid-template-columns: 1fr; */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+/* .content { */
+/* display: flex;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-area: content;
-  /* grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
-}
+  grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
+/* } */
 
 .social {
   grid-area: social;
@@ -114,6 +114,7 @@ h1.nav-logo {
 
 @media (min-width: 992px) {
   .main-container {
+    /* position: relative; */
     /* display: grid; */
     /* grid-template-columns: 1fr; */
     /* grid-template-rows: 1fr auto auto; */
