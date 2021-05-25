@@ -1,6 +1,6 @@
 import "./About.css";
 import image from "./mcentire-sticks.png";
-import image2 from "./mcentire-face.jpeg";
+// import image2 from "./mcentire-face.jpeg";
 
 const About = () => {
   return (

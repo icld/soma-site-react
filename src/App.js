@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
+// eslint-disable-next-line no-unused-vars
 import Header from "./components/Header/Header";
 import Gear from "./components/Gear";
 import Services from "./components/Services";

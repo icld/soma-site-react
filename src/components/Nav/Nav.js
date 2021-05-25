@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../images/Soma_Logo_w500.svg";
