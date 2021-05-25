@@ -1,7 +1,8 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../images/Soma_Logo_w500.svg";
 import { AppendScript } from "../AppendScript";
+import "./Nav.css";
 
 class Nav extends Component {
   componentDidMount() {
@@ -11,16 +12,20 @@ class Nav extends Component {
   render() {
     return (
       <div className="nav">
-        <Link to="/" className="nav-logo-home">
+        <NavLink to="/" className="nav-logo-home">
           <h1 class="nav-logo">JOHN McENTIRE</h1>
           musician/producer/engineer
-        </Link>
+        </NavLink>
         <div className="soma-logo-box">
           <Logo className="soma-img" />
         </div>
-        <Link to="/about" className="nav-li about">
+        <NavLink
+          to="/about"
+          className="nav-li about"
+          activeClassName="nav-li-about-active"
+        >
           about
-        </Link>
+        </NavLink>
         <a
           href="http://www.instagram.com/soma_ems/?hl=en"
           target="_blank"
@@ -29,18 +34,18 @@ class Nav extends Component {
         >
           social
         </a>
-        <Link to="/gear" className="nav-li gear">
+        <NavLink to="/gear" className="nav-li gear">
           gear
-        </Link>
-        <Link to="/discography" className="nav-li discography">
+        </NavLink>
+        <NavLink to="/discography" className="nav-li discography">
           discography
-        </Link>
-        <Link to="mailto:ian@icldesign.com" className="nav-li contact">
+        </NavLink>
+        <NavLink to="mailto:ian@icldesign.com" className="nav-li contact">
           contact
-        </Link>
-        <Link to="/services" className="nav-li services">
+        </NavLink>
+        <NavLink to="/services" className="nav-li services">
           services
-        </Link>
+        </NavLink>
       </div>
     );
   }

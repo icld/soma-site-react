@@ -1,0 +1,12 @@
+a.nav-li:hover:after {
+  content: " ←";
+}
+
+.nav-li-about-active::after {
+  content: " ←";
+}
+
+.nav-li:hover,
+.nav-logo:hover {
+  text-shadow: 0px 0px 15px rgba(0, 128, 128, 0.331);
+}
