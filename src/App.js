@@ -9,16 +9,20 @@ import About from "./components//About/About";
 import Landing from "./components/Landing/Landing";
 import Player from "./components/Player";
 import Footer from "./components/Footer/Footer";
+import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
+import tracks from "../src/components/AudioPlayer/tracks";
 
 import "./grid.css";
 import "./style.css";
 
 function App() {
+  console.log(tracks);
   return (
     <BrowserRouter>
       <div className="main-container">
         <Header />
         <div className="container">
+          <AudioPlayer tracks={tracks} />
           <Nav />
           <Player />
           <Switch>
