@@ -15,7 +15,7 @@ const AudioPlayer = ({ tracks }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Destructure for conciseness
-  const { title, artist, color, image, audioSrc } = tracks[trackIndex];
+  const { title, artist, image, audioSrc } = tracks[trackIndex];
 
   // Refs
   const audioRef = useRef(new Audio(audioSrc));
