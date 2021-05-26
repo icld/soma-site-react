@@ -113,14 +113,14 @@ h1.nav-logo {
 }
 
 @media (min-width: 992px) {
-  .main-container {
-    /* position: relative; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* grid-template-rows: 1fr auto auto; */
-    /* grid-template-areas: "header" "container" "footer"; */
-    /* height: 100%; */
-  }
+  /* .main-container { */
+  /* position: relative; */
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 1fr auto auto; */
+  /* grid-template-areas: "header" "container" "footer"; */
+  /* height: 100%; */
+  /* } */
   .container {
     grid-template-columns: repeat (4, auto);
     grid-column-gap: 10px;
