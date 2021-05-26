@@ -1,0 +1,20 @@
+.services-container {
+  width: 100%;
+  border: 2px dashed rgb(1, 79, 79);
+  justify-content: left;
+  border-radius: 20px;
+  padding: 0 20px;
+  height: fit-content;
+  /* margin-top: 20px; */
+  /* grid-area: about-info;
+   */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.services-container p {
+  font-family: Urbanist Light;
+  letter-spacing: 0.5px;
+  font-size: 26px;
+  /* text-indent: 20px; */
+  text-align: justify;
+}

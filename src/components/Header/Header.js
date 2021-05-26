@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -24,10 +24,19 @@ const Header = () => {
   };
   return (
     <div className="header">
-      <nav className="floating-nav">
-        <Link to="" onClick={scrollToTop}>
-          Top
-        </Link>
+      <div className="floating-nav">
+        <button onClick={scrollToTop} className="top-nav-btn">
+          ᐃ
+        </button>
+        <NavLink
+          exact
+          to="/"
+          className="nav-home"
+          activeClassName="active-nav-item"
+        >
+          home
+        </NavLink>
+        <span />
         <NavLink
           to="/about"
           className="nav-about"
@@ -43,10 +52,17 @@ const Header = () => {
         >
           discog
         </NavLink>
-        <button onClick={scrollToTop} className="top-nav-btn">
-          ᐃ
-        </button>
-      </nav>
+        <span />
+        <NavLink
+          exact
+          to="/gear"
+          className="nav-home"
+          activeClassName="active-nav-item"
+        >
+          {" "}
+          gear
+        </NavLink>
+      </div>
     </div>
   );
 };
