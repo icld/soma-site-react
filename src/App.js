@@ -24,7 +24,7 @@ function App() {
         <div className="container">
           <AudioPlayer tracks={tracks} />
           <Nav />
-          <Player />
+
           <Switch>
             <div className="content">
               <Route exact path="/services">

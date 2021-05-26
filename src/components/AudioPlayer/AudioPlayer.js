@@ -113,43 +113,45 @@ const AudioPlayer = ({ tracks }) => {
   }, []);
 
   return (
-    <div className="audio-player">
-      <div>big logo </div>
-      <div className="track-info">
-        <img
-          className="artwork"
-          src={image}
-          alt={`track artwork for ${title} by ${artist}`}
-        />
-        <h2 className="title">{title}</h2>
-        <h3 className="artist">{artist}</h3>
-        <AudioControls
-          isPlaying={isPlaying}
-          onPrevClick={toPrevTrack}
-          onNextClick={toNextTrack}
-          onPlayPauseClick={setIsPlaying}
-        />
-        <input
-          type="range"
-          value={trackProgress}
-          step="1"
-          min="0"
-          max={duration ? duration : `${duration}`}
-          className="progress"
-          onChange={(e) => onScrub(e.target.value)}
-          onMouseUp={onScrubEnd}
-          onKeyUp={onScrubEnd}
-          style={{ background: trackStyling }}
-        />
+    <div className="player-container">
+      <div className="player-div">
+        <div className="audio-player">
+          <div></div>
+          <div className="track-info">
+            <img
+              className="artwork"
+              src={image}
+              alt={`track artwork for ${title} by ${artist}`}
+            />
+            <h2 className="title">{title}</h2>
+            <h3 className="artist">{artist}</h3>
+            <AudioControls
+              isPlaying={isPlaying}
+              onPrevClick={toPrevTrack}
+              onNextClick={toNextTrack}
+              onPlayPauseClick={setIsPlaying}
+            />
+            <input
+              type="range"
+              value={trackProgress}
+              step="1"
+              min="0"
+              max={duration ? duration : `${duration}`}
+              className="progress"
+              onChange={(e) => onScrub(e.target.value)}
+              onMouseUp={onScrubEnd}
+              onKeyUp={onScrubEnd}
+              style={{ background: trackStyling }}
+            />
+          </div>
+
+          <Backdrop
+            trackIndex={trackIndex}
+            // activeColor={color}
+            isPlaying={isPlaying}
+          />
+        </div>
       </div>
-      <ul>
-        <li> </li>
-      </ul>
-      <Backdrop
-        trackIndex={trackIndex}
-        activeColor={color}
-        isPlaying={isPlaying}
-      />
     </div>
   );
 };
