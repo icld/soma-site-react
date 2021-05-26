@@ -1,14 +1,10 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../images/Soma_Logo_w500.svg";
-import { AppendScript } from "../AppendScript";
+// import { AppendScript } from "../AppendScript";
 import "./Nav.css";
 
 class Nav extends Component {
-  componentDidMount() {
-    AppendScript("/src/components/functionFX.js");
-  }
-
   render() {
     return (
       <div className="nav">
