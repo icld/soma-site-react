@@ -22,8 +22,6 @@ const AudioPlayer = ({ tracks }) => {
   const intervalRef = useRef();
   const isReady = useRef(false);
 
-  audioRef.autoplay = false;
-
   // Destructure for conciseness
   const { duration } = audioRef.current;
 
@@ -80,6 +78,7 @@ const AudioPlayer = ({ tracks }) => {
 
   useEffect(() => {
     if (isPlaying) {
+      audioRef.current.autoplay = false;
       audioRef.current.play();
       startTimer();
     } else {
