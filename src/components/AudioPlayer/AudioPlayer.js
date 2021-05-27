@@ -22,6 +22,8 @@ const AudioPlayer = ({ tracks }) => {
   const intervalRef = useRef();
   const isReady = useRef(false);
 
+  audioRef.autoplay = false;
+
   // Destructure for conciseness
   const { duration } = audioRef.current;
 
@@ -144,7 +146,6 @@ const AudioPlayer = ({ tracks }) => {
               style={{ background: trackStyling }}
             />
           </div>
-
           <Backdrop
             trackIndex={trackIndex}
             // activeColor={color}
