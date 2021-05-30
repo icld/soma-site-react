@@ -79,6 +79,7 @@ const AudioPlayer = ({ tracks }) => {
   const handlePlayPauseClick = (isPlaying) => {
     audioRef.current.autoplay = false;
     if (isPlaying) {
+      audioRef.current.play();
       startTimer();
       setIsPlaying(true);
     } else {
