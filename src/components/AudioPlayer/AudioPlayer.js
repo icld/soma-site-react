@@ -76,6 +76,16 @@ const AudioPlayer = ({ tracks }) => {
     }
   };
 
+  const handlePlayPauseClick = (isPlaying) => {
+    if (isPlaying) {
+      startTimer();
+      setIsPlaying(true);
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.autoplay = false;
@@ -130,7 +140,7 @@ const AudioPlayer = ({ tracks }) => {
               isPlaying={isPlaying}
               onPrevClick={toPrevTrack}
               onNextClick={toNextTrack}
-              onPlayPauseClick={setIsPlaying}
+              onPlayPauseClick={handlePlayPauseClick}
             />
             <input
               type="range"
