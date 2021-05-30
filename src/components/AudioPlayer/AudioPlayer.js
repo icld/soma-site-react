@@ -77,6 +77,7 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   const handlePlayPauseClick = (isPlaying) => {
+    audioRef.current.autoplay = false;
     if (isPlaying) {
       startTimer();
       setIsPlaying(true);
@@ -85,6 +86,8 @@ const AudioPlayer = ({ tracks }) => {
       setIsPlaying(false);
     }
   };
+
+  audioRef.current.autoplay = false;
 
   useEffect(() => {
     if (isPlaying) {
