@@ -72,18 +72,15 @@ const AudioPlayer = ({ tracks }) => {
   const toNextTrack = (isPlaying) => {
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
+      audioRef.current.autoplay = false;
+      console.log(audioRef.current);
     } else {
       setTrackIndex(0);
     }
-    audioRef.current.autoplay = false;
-    if (isPlaying) {
-      audioRef.current.play();
-      startTimer();
-      setIsPlaying(true);
-    } else {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    }
+
+    audioRef.current.play();
+    startTimer();
+    setIsPlaying(true);
   };
 
   const handlePlayPauseClick = (isPlaying) => {
