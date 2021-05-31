@@ -69,13 +69,21 @@ const AudioPlayer = ({ tracks }) => {
     handlePlayPauseClick(true);
   };
 
-  const toNextTrack = () => {
+  const toNextTrack = (isPlaying) => {
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
     } else {
       setTrackIndex(0);
     }
-    handlePlayPauseClick(true);
+    audioRef.current.autoplay = false;
+    if (isPlaying) {
+      audioRef.current.play();
+      startTimer();
+      setIsPlaying(true);
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
   };
 
   const handlePlayPauseClick = (isPlaying) => {
