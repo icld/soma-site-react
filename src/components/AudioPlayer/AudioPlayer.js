@@ -70,9 +70,9 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   const toNextTrack = () => {
+    audioRef.current.autoplay = false;
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
-      audioRef.current.autoplay = false;
     } else {
       setTrackIndex(0);
     }
@@ -92,6 +92,7 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   audioRef.current.autoplay = false;
+  audioRef.current.preload = true;
 
   useEffect(() => {
     if (isPlaying) {
