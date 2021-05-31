@@ -61,6 +61,7 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   const toPrevTrack = () => {
+    audioRef.current.play();
     if (trackIndex - 1 < 0) {
       setTrackIndex(tracks.length - 1);
     } else {
@@ -69,6 +70,7 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   const toNextTrack = () => {
+    audioRef.current.play();
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
     } else {
