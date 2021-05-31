@@ -74,10 +74,8 @@ const AudioPlayer = ({ tracks }) => {
     audioRef.current.play();
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
-      audioRef.current.play();
     } else {
       setTrackIndex(0);
-      audioRef.current.play();
     }
   };
 
