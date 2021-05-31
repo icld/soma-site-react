@@ -66,7 +66,7 @@ const AudioPlayer = ({ tracks }) => {
     } else {
       setTrackIndex(trackIndex - 1);
     }
-    handlePlayPauseClick();
+    handlePlayPauseClick(true);
   };
 
   const toNextTrack = () => {
@@ -75,7 +75,7 @@ const AudioPlayer = ({ tracks }) => {
     } else {
       setTrackIndex(0);
     }
-    handlePlayPauseClick();
+    handlePlayPauseClick(true);
   };
 
   const handlePlayPauseClick = (isPlaying) => {
