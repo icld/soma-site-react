@@ -63,20 +63,19 @@ const AudioPlayer = ({ tracks }) => {
   const toPrevTrack = () => {
     if (trackIndex - 1 < 0) {
       setTrackIndex(tracks.length - 1);
-      audioRef.current.play();
     } else {
       setTrackIndex(trackIndex - 1);
-      audioRef.current.play();
     }
+    handlePlayPauseClick();
   };
 
   const toNextTrack = () => {
-    audioRef.current.play();
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
     } else {
       setTrackIndex(0);
     }
+    handlePlayPauseClick();
   };
 
   const handlePlayPauseClick = (isPlaying) => {
