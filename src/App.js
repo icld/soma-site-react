@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 // eslint-disable-next-line no-unused-vars
 import Header from "./components/Header/Header";
-import Gear from "./components/Gear";
+import Gear from "./components/Gear/Gear";
 import Services from "./components/ServicesComponent/Services";
 import Discography from "./components/Discography/Discography";
 import About from "./components//About/About";

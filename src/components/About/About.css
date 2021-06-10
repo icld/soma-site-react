@@ -1,5 +1,6 @@
 .about-wrapper {
   display: flexbox;
+  margin: auto 0;
 }
 
 .about-container {

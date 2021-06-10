@@ -1,6 +1,8 @@
+import "./Gear.css";
+
 const Gear = () => {
   return (
-    <div>
+    <div class="gear-container">
       <h3>MIXING</h3>
       <p>
         Electrodyne ACC-1204 analog mixing console, equipped with 15 channels of
