@@ -1,11 +1,15 @@
 // import { useState } from "react";
 import "./Discography.css";
 import albumData from "../../data/albumData";
+import image from "./discography.jpg";
 const data = albumData;
 
 const Discography = () => {
   return (
     <div className="discog">
+      <div classname="about-img-box">
+        <img src={image} alt="john" className="services-img"></img>
+      </div>
       {data.map((artist) => (
         <div className="artist-card">
           <h2 className="artist-title">{artist.artist}</h2>

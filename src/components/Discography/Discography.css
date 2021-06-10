@@ -1,9 +1,10 @@
 .discog {
-  font-family: Urbanist-Light;
+  font-family: "B612", sans-serif;
 }
 
 .discog h2 {
-  font-family: Steps-Mono-Thin;
+  font-family: "B612", sans-serif;
+  font-weight: 300;
 }
 
 .record-card img {
@@ -32,7 +33,7 @@ span {
 
 .artist-title {
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-left: 13px;
   text-shadow: 0.5px 0.5px 1px black;
   /* flex-wrap: nowrap; */
@@ -41,6 +42,8 @@ h3 {
   font-size: 1.25rem;
 }
 .record-info p {
+  color: #666;
+  font-weight: 200;
   font-size: 20px;
   padding-top: 5px;
   margin: 0 auto;
