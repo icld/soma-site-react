@@ -36,9 +36,9 @@ class Nav extends Component {
         <NavLink to="/discography" className="nav-li discography">
           discography
         </NavLink>
-        <NavLink to="mailto:ian@icldesign.com" className="nav-li contact">
+        <a href="mailto:ian@icldesign.com" className="nav-li contact">
           contact
-        </NavLink>
+        </a>
         <NavLink to="/services" className="nav-li services">
           services
         </NavLink>
