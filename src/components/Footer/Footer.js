@@ -13,6 +13,7 @@ const Footer = () => {
     <div className="footer">
       <nav className="floating-footer">
         <button onClick={scrollToTop}>Top</button>
+        <a href="mailto:ian@icldesign.com">contact</a>
       </nav>
     </div>
   );

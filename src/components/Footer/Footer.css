@@ -1,4 +1,5 @@
 .footer {
+  color: white;
   margin: 0 auto;
   width: 100%;
   /* transform: translateY(-40px); */
@@ -8,8 +9,17 @@
   /* position: sticky;
   top: 0; */
   align-items: center;
-  justify-content: center;
-  background-color: #333;
-  height: 40px;
+  justify-content: left;
+  background-color: black;
+  margin-top: 60px;
+  height: 100px;
   color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: tomato;
 }
