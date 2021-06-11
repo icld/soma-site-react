@@ -24,12 +24,10 @@ const AudioPlayer = ({ tracks }) => {
   // Destructure for conciseness
   const { duration } = audioRef.current;
 
+  // eslint-disable-next-line no-unused-vars
   const currentPercentage = duration
     ? `${(trackProgress / duration) * 100}%`
     : "0%";
-  const trackStyling = `
-    -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))
-  `;
 
   const startTimer = () => {
     // Clear any timers already running
