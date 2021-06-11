@@ -133,7 +133,6 @@ const AudioPlayer = ({ tracks }) => {
             onMouseUp={onScrubEnd}
             onKeyUp={onScrubEnd}
             onTouchEnd={onScrubEnd}
-            style={{ background: trackStyling }}
           />
         </div>
       </div>

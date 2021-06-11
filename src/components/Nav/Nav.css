@@ -14,3 +14,7 @@ a.nav-li:hover:after {
 .soma-img {
   color: tomato;
 }
+
+.nav-logo-home {
+  font-size: 16px;
+}

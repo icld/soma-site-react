@@ -1,6 +1,25 @@
 import "./Services.css";
 import image from "./console.jpg";
 
+const services = [
+  {
+    service: "Production and Engineering",
+    rate: "per day",
+  },
+  {
+    service: "Mixing and Remixing",
+    rate: "per day",
+  },
+  {
+    service: "Mastering",
+    rate: "per song",
+  },
+  {
+    service: "Session Drumming",
+    rate: "per song",
+  },
+];
+
 const Services = () => {
   return (
     <div className="services-wrapper">
@@ -12,15 +31,14 @@ const Services = () => {
       <div className="services-container">
         <h2> SERVICES </h2>
 
-        <div class="sevices-content">
-          <p>
-            John McEntire is pleased to offer the following services: <br />
-            <br />
-            Production and Engineering - (daily rates) <br />
-            Mixing and Remixing - (daily rates) <br />
-            Mastering - (per song) <br />
-            Session Drumming - (per song) <br />
-          </p>
+        <div class="services-content">
+          <h3>Please contact John about rates for the following services:</h3>
+          {services.map((service) => (
+            <div>
+              <div className="service-service">{service.service}</div>
+              <div className="service-price">{service.rate}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

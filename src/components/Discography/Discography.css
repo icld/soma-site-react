@@ -1,10 +1,28 @@
 .discog {
   font-family: "B612", sans-serif;
+  border: 0.5px dashed rgba(1, 40, 40, 0.762);
+  justify-content: left;
+  border-radius: 1px;
+
+  padding: 0 15px;
+  padding-bottom: 20px;
+  /* margin-top: 20px; */
+  grid-area: services-info;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .discog h2 {
   font-family: "B612", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
+}
+.discog-title {
+  font-family: "Steps-Mono", sans-serif;
+  display: inline-block;
+  border-bottom: 0.5px dashed rgba(1, 40, 40, 0.762);
+
+  border-right: 0.5px dashed rgba(1, 40, 40, 0.762);
+
+  padding-right: 5px;
 }
 
 .record-card img {

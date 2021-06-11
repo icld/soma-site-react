@@ -7,12 +7,12 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
   background: var(--active-color);
   transition: background 0.4s ease;
-}
+} */
 
 button {
   background: none;
@@ -34,15 +34,15 @@ input[type="range"] {
 .player-container {
   height: 100%;
   font-family: "B612", sans-serif;
-  border-left: 1px black dashed;
+  border-left: 0.5px dashed rgba(1, 40, 40, 0.762);
 }
 
 .audio-player {
   top: 90px;
-  position: sticky;
+
   width: 100%;
 
-  padding: 24px;
+  padding: 0 24px;
   border-radius: 20px;
   /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
   margin: auto;
@@ -98,30 +98,20 @@ input[type="range"] {
   fill: var(--white);
 }
 
-.color-backdrop {
-  background: linear-gradient(45deg, var(--active-color) 20%, transparent 100%)
-    no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.color-backdrop.playing {
-  animation: colorChange 20s alternate infinite;
-}
-
-@keyframes colorChange {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-
 .lamar {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .audio-player {
+    top: 90px;
+    position: sticky;
+    width: 100%;
+
+    padding: 0 24px;
+    border-radius: 20px;
+    /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
+    margin: auto;
+    color: var(--white);
+  }
 }

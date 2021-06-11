@@ -3,7 +3,7 @@
   grid-template-columns: minmax(150px, auto);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  grid-template-rows: 350px 1fr 1fr;
+  grid-template-rows: 350px auto auto;
   grid-template-areas: "nav" "content" "player";
   grid-area: "container";
 }
@@ -31,10 +31,10 @@
 }
 
 .content {
-  display: flex;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-area: content;
+  height: fit-content;
   /* grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont"; */
 }
 
