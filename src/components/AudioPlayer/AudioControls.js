@@ -42,16 +42,10 @@ const AudioControls = ({
       type="button"
       className="next"
       aria-label="Next"
-      onClick={() => {
-        onPlayPauseClick(true);
-        onNextClick();
-      }}
+      onClick={onNextClick}
     >
       <Next />
     </button>
-    <ul>
-      <li></li>
-    </ul>
   </div>
 );
 

@@ -7,12 +7,12 @@
   box-sizing: border-box;
 }
 
-/* html {
+html {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
   background: var(--active-color);
   transition: background 0.4s ease;
-} */
+}
 
 button {
   background: none;
@@ -31,18 +31,25 @@ input[type="range"] {
   cursor: pointer;
 }
 
-.audio-player {
-  max-width: 400px;
+.player-container {
   height: 100%;
+  font-family: "B612", sans-serif;
+  border-left: 1px black dashed;
+}
+
+.audio-player {
+  top: 90px;
+  position: sticky;
+  width: 100%;
+
   padding: 24px;
   border-radius: 20px;
-  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
   margin: auto;
   color: var(--white);
 }
 
 .artwork {
-  object-fit: cover;
   border-radius: 120px;
   display: block;
   margin: auto;
@@ -57,7 +64,6 @@ input[type="range"] {
 }
 
 .title {
-  font-family: Space Grotesk;
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -71,18 +77,19 @@ input[type="range"] {
   display: flex;
   justify-content: space-between;
   width: 75%;
-  margin: 0 auto 15px;
+  margin: 0 auto 30px;
 }
 
 .audio-controls .prev svg,
 .audio-controls .next svg {
+  margin: 0 auto 30px;
   width: 35px;
   height: 35px;
-  /* color: black; */
 }
 
 .audio-controls .play svg,
 .audio-controls .pause svg {
+  margin: 0 auto 30px;
   height: 40px;
   width: 40px;
 }
@@ -113,4 +120,8 @@ input[type="range"] {
   to {
     filter: hue-rotate(360deg);
   }
+}
+
+.lamar {
+  width: 100%;
 }

@@ -3,8 +3,8 @@ import image from "./console.jpg";
 
 const Services = () => {
   return (
-    <div className="about-wrapper">
-      <div classname="about-img-box">
+    <div className="services-wrapper">
+      <div classname="services-img-box">
         <img src={image} alt="john" className="services-img"></img>
       </div>
       {/* <img src={image2} alt="john" className="about-pic2"></img> */}

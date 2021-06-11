@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import AudioControls from "./AudioControls";
-import Backdrop from "./Backdrop";
+import lamar from "./assets/lamar.png";
 // import tracks from "./tracks";
 import "./audioPlayerStyle.css";
 
@@ -20,7 +20,6 @@ const AudioPlayer = ({ tracks }) => {
   // Refs
   const audioRef = useRef(new Audio(audioSrc));
   const intervalRef = useRef();
-  const isReady = useRef(false);
 
   // Destructure for conciseness
   const { duration } = audioRef.current;
@@ -53,34 +52,48 @@ const AudioPlayer = ({ tracks }) => {
   };
 
   const onScrubEnd = () => {
-    // If not already playing, start
-    if (!isPlaying) {
-      setIsPlaying(true);
-    }
     startTimer();
   };
 
   const toPrevTrack = () => {
     if (trackIndex - 1 < 0) {
-      setTrackIndex(tracks.length - 1);
+      handleTrackChange(tracks.length - 1);
     } else {
-      setTrackIndex(trackIndex - 1);
+      handleTrackChange(trackIndex - 1);
     }
-    handlePlayPauseClick(true);
   };
 
   const toNextTrack = () => {
-    audioRef.current.autoplay = false;
     if (trackIndex < tracks.length - 1) {
-      setTrackIndex(trackIndex + 1);
+      handleTrackChange(trackIndex + 1);
     } else {
-      setTrackIndex(0);
+      handleTrackChange(0);
     }
-    console.log(audioRef.current);
   };
 
-  const handlePlayPauseClick = (isPlaying) => {
-    audioRef.current.autoplay = false;
+  // Handles cleanup and setup when changing tracks
+  const handleTrackChange = (newIndex) => {
+    setTrackIndex(newIndex);
+
+    audioRef.current.pause();
+
+    audioRef.current = new Audio(tracks[newIndex].audioSrc);
+    setTrackProgress(audioRef.current.currentTime);
+
+    audioRef.current.play();
+    setIsPlaying(true);
+    startTimer();
+  };
+
+  useEffect(() => {
+    // Pause and clean up on unmount
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  const handlePlayPause = (isPlaying) => {
     if (isPlaying) {
       audioRef.current.play();
       startTimer();
@@ -91,82 +104,36 @@ const AudioPlayer = ({ tracks }) => {
     }
   };
 
-  audioRef.current.autoplay = false;
-  audioRef.current.preload = true;
-
-  useEffect(() => {
-    if (isPlaying) {
-      audioRef.current.autoplay = false;
-      audioRef.current.play();
-      startTimer();
-    } else {
-      audioRef.current.pause();
-    }
-    // eslint-disable-next-line
-  }, [isPlaying]);
-
-  // Handles cleanup and setup when changing tracks
-  useEffect(() => {
-    audioRef.current.pause();
-
-    audioRef.current = new Audio(audioSrc);
-    setTrackProgress(audioRef.current.currentTime);
-
-    if (isReady.current) {
-      audioRef.current.play();
-      setIsPlaying(true);
-      startTimer();
-    } else {
-      // Set the isReady ref as true for the next pass
-      isReady.current = true;
-    }
-    // eslint-disable-next-line
-  }, [trackIndex]);
-
-  useEffect(() => {
-    // Pause and clean up on unmount
-    return () => {
-      audioRef.current.pause();
-      clearInterval(intervalRef.current);
-    };
-  }, []);
-
   return (
     <div className="player-container">
-      <div className="player-div">
-        <div className="audio-player">
-          <div></div>
-          <div className="track-info">
-            <img
-              className="artwork"
-              src={image}
-              alt={`track artwork for ${title} by ${artist}`}
-            />
-            <h2 className="title">{title}</h2>
-            <h3 className="artist">{artist}</h3>
-            <AudioControls
-              isPlaying={isPlaying}
-              onPrevClick={toPrevTrack}
-              onNextClick={toNextTrack}
-              onPlayPauseClick={handlePlayPauseClick}
-            />
-            <input
-              type="range"
-              value={trackProgress}
-              step="1"
-              min="0"
-              max={duration ? duration : `${duration}`}
-              className="progress"
-              onChange={(e) => onScrub(e.target.value)}
-              onMouseUp={onScrubEnd}
-              onKeyUp={onScrubEnd}
-              style={{ background: trackStyling }}
-            />
-          </div>
-          <Backdrop
-            trackIndex={trackIndex}
-            // activeColor={color}
+      <div className="audio-player">
+        <img src={lamar} alt="cat" className="lamar"></img>
+        <div className="track-info">
+          <img
+            className="artwork"
+            src={image}
+            alt={`track artwork for ${title} by ${artist}`}
+          />
+          <h2 className="title">{title}</h2>
+          <h3 className="artist">{artist}</h3>
+          <AudioControls
             isPlaying={isPlaying}
+            onPrevClick={toPrevTrack}
+            onNextClick={toNextTrack}
+            onPlayPauseClick={handlePlayPause}
+          />
+          <input
+            type="range"
+            value={trackProgress}
+            step="1"
+            min="0"
+            max={duration ? duration : `${duration}`}
+            className="progress"
+            onChange={(e) => onScrub(e.target.value)}
+            onMouseUp={onScrubEnd}
+            onKeyUp={onScrubEnd}
+            onTouchEnd={onScrubEnd}
+            style={{ background: trackStyling }}
           />
         </div>
       </div>
